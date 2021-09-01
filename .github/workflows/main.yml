@@ -4,11 +4,13 @@ name: Linux_Container_Workflow
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
+        defaults:
+          run:
+            working-directory: ./frontend
         steps:
         # checkout the repo
         - name: 'Checkout GitHub Action'
           uses: actions/checkout@main
-          working-directory: ./frontend
           
           
         - name: 'Login via Azure CLI'
