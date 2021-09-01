@@ -8,6 +8,8 @@ jobs:
         # checkout the repo
         - name: 'Checkout GitHub Action'
           uses: actions/checkout@main
+           working-directory: ./frontend
+          
           
         - name: 'Login via Azure CLI'
           uses: azure/login@v1
